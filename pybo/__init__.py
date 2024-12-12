@@ -12,6 +12,10 @@ from flask import Flask
 def create_app():
     app = Flask(__name__)
 
+    # '/' 주소가 호출이 되면
+    # 밑에 있는 hello_pybo가 실행
+    # @app.route와 같은 에너테이션으로 url을 매핑하는 함수를
+    # 라우팅 함수
     @app.route('/')
     def hello_pybo():
         return 'Hello, Pybo!'
